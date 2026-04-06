@@ -41,5 +41,14 @@ public class IntegerContainer {
         }
         return data[index];
     }
+    public void remove(int index){
+        if(index < 0 || index >=size){
+            throw new IndexOutOfBoundsException("Индекс: " + index);
+        }
+        for (int i = index; i < size - 1; i++) {
+            data[i] = data[i + 1];
+        }
+        size--;
+    }
 
 }
