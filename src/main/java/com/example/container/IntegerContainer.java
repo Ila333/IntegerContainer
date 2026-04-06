@@ -51,4 +51,7 @@ public class IntegerContainer {
         size--;
     }
 
+    public int size() {
+        return size;
+    }
 }
