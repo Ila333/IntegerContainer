@@ -34,4 +34,12 @@ public class IntegerContainer {
         System.arraycopy(data, 0, newData, 0, data.length);
         data = newData;
     }
+
+    public int get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+        return data[index];
+    }
+
 }
